@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="SONAS Bathrooms — Email Programme case study by Scott Kirwan." />
+  <title>SONAS Bathrooms — Scott Kirwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/casestudy.css" />
+</head>
+<body>
+
+  <!-- Grain texture -->
+  <svg class="grain" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noise)" />
+  </svg>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- NAV ──────────────────────────────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html#hero" class="nav__tagline" data-cursor="link">The analytical creative.</a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html#work"    data-cursor="link">Work</a>
+        <a href="index.html#about"   data-cursor="link">About</a>
+        <a href="index.html#contact" data-cursor="link">Contact</a>
+      </nav>
+
+      <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO ─────────────────────────────────────────────── -->
+    <section class="cs-hero">
+      <div class="container">
+
+        <a href="index.html#work" class="cs-back" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          All Work
+        </a>
+
+        <div class="cs-hero__kicker">
+          <span class="label">Email Marketing &amp; Automation</span>
+          <span class="cs-hero__date">Digital Marketing Specialist, 2023&ndash;2026</span>
+        </div>
+
+        <h1 class="cs-hero__title">SONAS</h1>
+
+        <div class="cs-email-collage" data-reveal>
+          <div class="cs-email-collage__item">
+            <img src="sonas-email-1.png" alt="SONAS campaign email 1" />
+          </div>
+          <div class="cs-email-collage__item">
+            <img src="sonas-email-2.png" alt="SONAS campaign email 2" />
+          </div>
+          <div class="cs-email-collage__item">
+            <img src="sonas-email-3.png" alt="SONAS campaign email 3" />
+          </div>
+        </div>
+
+        <div class="cs-callout" data-reveal>
+          <div class="cs-callout__grid">
+            <div class="cs-callout__item">
+              <span class="cs-callout__num">20<sup>%</sup></span>
+              <span class="cs-callout__label">Open Rate Uplift</span>
+            </div>
+            <div class="cs-callout__item">
+              <span class="cs-callout__num">9<sup>K</sup></span>
+              <span class="cs-callout__label">Contacts after list clean (from 11K)</span>
+            </div>
+            <div class="cs-callout__item">
+              <span class="cs-callout__num">4</span>
+              <span class="cs-callout__label">B2B Segments</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ARTICLE ──────────────────────────────────────────── -->
+    <article class="cs-article">
+      <div class="container">
+
+        <!-- The Problem -->
+        <div class="cs-section" data-reveal>
+          <div class="cs-section__label">
+            <span class="label">The Problem</span>
+          </div>
+          <div class="cs-section__body">
+            <p>A one-person marketing team, two distinct audiences, and an email programme that wasn&rsquo;t working. Sends were irregular, templates were visually poor, and open rates reflected it.</p>
+            <p>The B2C list had grown to over 11,000 contacts with significant dead weight. Four separate B2B lists across ROI, UK, Northern Ireland, and new leads were growing fast &mdash; particularly in the UK, a new market &mdash; with no structured onboarding in place. Retailers ranged from a few thousand euro in annual revenue to several hundred thousand. They needed more than a newsletter. They needed a system.</p>
+          </div>
+        </div>
+
+        <!-- What I Built -->
+        <div class="cs-section" data-reveal>
+          <div class="cs-section__label">
+            <span class="label">What I Built</span>
+          </div>
+          <div class="cs-section__body">
+            <p>Started with the foundation: new email templates that brought the design up to a standard that reflected the brand. Once that was in place, I built a 7-email automated welcome flow for B2C customers with subject lines heavily optimised at each stage, taking new homeowners through SONAS products and services in a logical sequence.</p>
+            <p>With B2C proving the model, I turned to B2B. I built a separate welcome flow for UK retailers &mdash; a series of videos featuring the CEO walking through how SONAS operates, supported by emails covering delivery, access to marketing materials, troubleshooting, and after-sales service. Every email was personalised beyond first name: written from the retailer&rsquo;s dedicated sales rep, referencing their agreed terms and their specific relationship with SONAS.</p>
+            <p>Beyond the automated flows, I managed ongoing campaign sends across all four B2B segments and the full B2C list &mdash; product launches, seasonal offers, price increases, and confidential trade updates. For communications outside Mailchimp, I ran mail merge sends to retailers covering price changes and product information packs so they could list updated lines on their own sites.</p>
+            <p>Once the programme was performing, I cleaned the B2C list from 11,000 to 9,000 &mdash; removing unengaged contacts to protect deliverability and list health.</p>
+
+            <div class="cs-built-cols" style="grid-template-columns: 35% 1fr;">
+
+              <!-- Email mockup -->
+              <div>
+                <p class="cs-email-caption">Campaign send — KBB Exhibition 2024</p>
+                <div class="cs-email-mockup">
+                  <div class="cs-email-mockup__chrome" aria-hidden="true">
+                    <span class="cs-email-mockup__dot"></span>
+                    <span class="cs-email-mockup__dot"></span>
+                    <span class="cs-email-mockup__dot"></span>
+                  </div>
+                  <img src="sonas-email-1.png" alt="SONAS KBB Exhibition 2024 campaign email" />
+                </div>
+              </div>
+
+              <!-- Flow diagrams -->
+              <div class="cs-flows">
+
+                <!-- B2C Welcome Flow -->
+                <div class="cs-flow">
+                  <p class="cs-flow__title">B2C Welcome Flow</p>
+                  <p class="cs-flow__cadence">Cadence: 1 email per week</p>
+                  <div class="cs-flow__steps">
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Welcome</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Furniture</span>
+                      <span class="cs-flow__box-detail">Video &middot; Brochure &middot; Find a Retailer</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Showers</span>
+                      <span class="cs-flow__box-detail">Video &middot; Book a Consultation &middot; Baths</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Mirrors</span>
+                      <span class="cs-flow__box-detail">Video &middot; Bathroom Design Kit &middot; Website</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Taps</span>
+                      <span class="cs-flow__box-detail">Video &middot; Brochure &middot; Additional Category</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Toilets</span>
+                      <span class="cs-flow__box-detail">Video &middot; Find a Retailer &middot; Book a Consultation</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Accessories</span>
+                      <span class="cs-flow__box-detail">Video &middot; Website &middot; Additional Category</span>
+                    </div>
+
+                  </div>
+                </div>
+
+                <!-- B2B UK Welcome Flow -->
+                <div class="cs-flow">
+                  <p class="cs-flow__title">B2B UK Welcome Flow</p>
+                  <p class="cs-flow__cadence">Cadence: every Monday &amp; Thursday</p>
+                  <div class="cs-flow__steps">
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Welcome to SONAS</span>
+                      <span class="cs-flow__box-detail">Greeting from CEO</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">CEO Video</span>
+                      <span class="cs-flow__box-detail">SONAS overview &middot; Brochure link &middot; Personalised sales rep section</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Ordering and Deliveries</span>
+                      <span class="cs-flow__box-detail">Process overview &middot; Hero video</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Quality Promise</span>
+                      <span class="cs-flow__box-detail">Testing video &middot; Product information pack &middot; Marketing materials</span>
+                    </div>
+
+                    <div class="cs-flow__connector" aria-hidden="true">
+                      <span class="cs-flow__arrow">↓</span>
+                    </div>
+
+                    <div class="cs-flow__box">
+                      <span class="cs-flow__box-name">Aftersales</span>
+                      <span class="cs-flow__box-detail">Warehouse video &middot; Aftersales team introduction</span>
+                    </div>
+
+                  </div>
+                </div>
+
+              </div><!-- /.cs-flows -->
+
+            </div><!-- /.cs-built-cols -->
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- RESULTS ──────────────────────────────────────────── -->
+    <section class="cs-results">
+      <div class="container">
+        <span class="label" data-reveal>Results</span>
+
+        <div class="cs-stats-grid cs-stats-grid--3" data-reveal>
+          <div class="cs-stat">
+            <span class="cs-stat__num">20<sup>%</sup></span>
+            <span class="cs-stat__label">Open Rate Uplift</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">9<sup>K</sup></span>
+            <span class="cs-stat__label">List cleaned from 11K — protecting deliverability</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">4</span>
+            <span class="cs-stat__label">B2B Segments served with tailored communications</span>
+          </div>
+        </div>
+
+        <div class="cs-segments" data-reveal>
+          <p class="cs-segments__title">Audience Segments Managed</p>
+          <div class="cs-segments-grid">
+            <div class="cs-segment-card">
+              <span class="cs-segment-card__name">ROI Retailers</span>
+              <div class="cs-segment-card__detail">
+                <span>~800 contacts</span>
+                <span>Established accounts, highest revenue range</span>
+              </div>
+            </div>
+            <div class="cs-segment-card">
+              <span class="cs-segment-card__name">UK Retailers</span>
+              <div class="cs-segment-card__detail">
+                <span>~1,000 contacts</span>
+                <span>Fastest growing, new market expansion</span>
+              </div>
+            </div>
+            <div class="cs-segment-card">
+              <span class="cs-segment-card__name">NI Retailers</span>
+              <div class="cs-segment-card__detail">
+                <span>~200 contacts</span>
+                <span>Cross-border, hybrid market</span>
+              </div>
+            </div>
+            <div class="cs-segment-card">
+              <span class="cs-segment-card__name">B2C Homeowners</span>
+              <div class="cs-segment-card__detail">
+                <span>~9,000 contacts</span>
+                <span>Product journey welcome flow across all regions</span>
+              </div>
+            </div>
+            <div class="cs-segment-card">
+              <span class="cs-segment-card__name">Non-Customer Leads</span>
+              <div class="cs-segment-card__detail">
+                <span>~600 contacts</span>
+                <span>Pipeline and outreach focused</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <ul class="cs-results-detail" data-reveal>
+          <li>20% uplift in open rates across the programme.</li>
+          <li>B2C list cleaned from 11K to 9K. Improved deliverability and engagement quality.</li>
+          <li>UK retailer onboarding flow received direct feedback that SONAS was the only manufacturer they had dealt with that had this type of process &mdash; making onboarding easier than any competitor or adjacent supplier.</li>
+          <li>Personalisation at scale across four B2B segments with relationship-specific details per retailer.</li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- TAKEAWAY ─────────────────────────────────────────── -->
+    <section class="cs-takeaway">
+      <div class="container">
+        <span class="label" data-reveal>The Takeaway</span>
+        <p class="cs-takeaway__text" data-reveal>The 20% uplift came from a degraded starting point, which makes it a harder number to achieve than it looks. The bigger win was systemic: replacing an ad hoc operation with a programme that could scale across markets, audiences, and relationship types. Email done properly isn&rsquo;t a channel. It&rsquo;s infrastructure.</p>
+      </div>
+    </section>
+
+    <!-- TOOLS ────────────────────────────────────────────── -->
+    <div class="cs-tools">
+      <div class="container">
+        <div class="cs-tools__inner">
+          <span class="label">Tools</span>
+          <ul class="cs-tools__list" aria-label="Tools used">
+            <li>Mailchimp</li>
+            <li>BeeFree</li>
+            <li>Excel</li>
+            <li>GA4</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOT NAV ─────────────────────────────────────────── -->
+    <div class="cs-foot-nav">
+      <div class="container">
+        <a href="index.html#work" class="cs-back" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Work
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">Scott Kirwan</span>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+        <span class="footer__copy">&copy; <span id="year"></span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Rulya — Product & Growth case study by Scott Kirwan." />
+  <title>Rulya — Scott Kirwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="stylesheet" href="css/casestudy.css" />
+</head>
+<body>
+
+  <!-- Grain texture -->
+  <svg class="grain" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noise)" />
+  </svg>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- NAV ──────────────────────────────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="index.html#hero" class="nav__tagline" data-cursor="link">The analytical creative.</a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+        <a href="index.html#work"    data-cursor="link">Work</a>
+        <a href="index.html#about"   data-cursor="link">About</a>
+        <a href="index.html#contact" data-cursor="link">Contact</a>
+      </nav>
+
+      <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO ─────────────────────────────────────────────── -->
+    <section class="cs-hero">
+      <div class="container">
+
+        <a href="index.html#work" class="cs-back" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          All Work
+        </a>
+
+        <div class="cs-hero__kicker">
+          <span class="label">Product &amp; Growth</span>
+          <span class="cs-hero__date">MSc Marketing Project &mdash; UCD Smurfit, 2025</span>
+        </div>
+
+        <h1 class="cs-hero__title">RULYA</h1>
+
+        <a href="https://www.rulya.ie" class="cs-livesite" target="_blank" rel="noopener noreferrer" data-cursor="link">
+          Visit the live site &rarr;
+        </a>
+
+        <div class="cs-callout" data-reveal>
+          <div class="cs-callout__grid">
+            <div class="cs-callout__item">
+              <span class="cs-callout__num">180</span>
+              <span class="cs-callout__label">Signups</span>
+            </div>
+            <div class="cs-callout__item">
+              <span class="cs-callout__num">52<sup>%</sup></span>
+              <span class="cs-callout__label">First-Visit Conversion</span>
+            </div>
+            <div class="cs-callout__item">
+              <span class="cs-callout__num">89<sup>%</sup></span>
+              <span class="cs-callout__label">Mobile Visits</span>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- COVER IMAGE ──────────────────────────────────────── -->
+    <div class="cs-cover">
+      <div class="container">
+        <div class="cs-cover__img">
+          <img src="rulya-hero.png" alt="Rulya — making casual sport easier to join, book, and pay for" />
+        </div>
+      </div>
+    </div>
+
+    <!-- ARTICLE ──────────────────────────────────────────── -->
+    <article class="cs-article">
+      <div class="container">
+
+        <!-- The Problem -->
+        <div class="cs-section" id="problem" data-reveal>
+          <div class="cs-section__label">
+            <span class="label">The Problem</span>
+          </div>
+          <div class="cs-section__body">
+            <p>There aren't enough third spaces for young people that don't revolve around the pub. Courts, GAA grounds, and local sports venues sit half empty every week, not because demand isn't there, but because booking them is a friction nightmare and most casual players don't have a crew to fill one.</p>
+            <p>Facebook groups create plans that fall apart. No-shows kill momentum. The infrastructure for casual sport simply doesn't exist.</p>
+          </div>
+        </div>
+
+        <!-- The Insight -->
+        <div class="cs-section" id="insight" data-reveal>
+          <div class="cs-section__label">
+            <span class="label">The Insight</span>
+          </div>
+          <div class="cs-section__body">
+            <p>With younger people drinking less on average, the demand for social alternatives is only growing. The market gap wasn't just a sports problem, it was a community problem with a booking problem layered on top.</p>
+          </div>
+        </div>
+
+        <!-- What We Built -->
+        <div class="cs-section" data-reveal>
+          <div class="cs-section__label">
+            <span class="label">What We Built</span>
+          </div>
+          <div class="cs-section__body">
+            <p><a href="https://www.rulya.ie" class="cs-body-link" target="_blank" rel="noopener noreferrer">Rulya</a> is a hyper-local platform that makes casual sport easier to join, book, and pay for. &ldquo;No team? No bother.&rdquo; The platform connects players, unlocks underused venues &mdash; including school halls and GAA clubs &mdash; and handles payments, eliminating the no-show problem that makes Facebook groups unreliable.</p>
+
+            <div class="cs-built-cols">
+              <div class="cs-built-col-img">
+                <img src="rulya-app.png" alt="Rulya app interface" />
+              </div>
+              <div class="cs-built-col-matrix">
+                <p class="cs-matrix__caption">Competitive landscape</p>
+                <div class="cs-matrix" role="img" aria-label="Competitive landscape matrix: Rulya sits in the high social, high accessibility quadrant">
+                  <div class="cs-matrix__vline"></div>
+                  <div class="cs-matrix__hline"></div>
+
+                  <span class="cs-matrix__axis cs-matrix__axis--top">High Accessibility</span>
+                  <span class="cs-matrix__axis cs-matrix__axis--bottom">Low Accessibility</span>
+                  <span class="cs-matrix__axis cs-matrix__axis--left">Low Social</span>
+                  <span class="cs-matrix__axis cs-matrix__axis--right">High Social</span>
+
+                  <div class="cs-matrix__dot cs-matrix__dot--rulya" style="left:76%;top:18%">
+                    <span class="cs-matrix__mark"></span>
+                    <span class="cs-matrix__dot-label">Rulya</span>
+                  </div>
+                  <div class="cs-matrix__dot" style="left:21%;top:23%">
+                    <span class="cs-matrix__mark"></span>
+                    <span class="cs-matrix__dot-label">Urban Sports Club</span>
+                  </div>
+                  <div class="cs-matrix__dot" style="left:24%;top:44%">
+                    <span class="cs-matrix__mark"></span>
+                    <span class="cs-matrix__dot-label">Playfinder</span>
+                  </div>
+                  <div class="cs-matrix__dot cs-matrix__dot--flip" style="left:79%;top:76%">
+                    <span class="cs-matrix__mark"></span>
+                    <span class="cs-matrix__dot-label">Facebook Groups</span>
+                  </div>
+                  <div class="cs-matrix__dot cs-matrix__dot--flip" style="left:33%;top:70%">
+                    <span class="cs-matrix__mark"></span>
+                    <span class="cs-matrix__dot-label">Playtomic</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- My Role -->
+        <div class="cs-section" id="role" data-reveal>
+          <div class="cs-section__label">
+            <span class="label">My Role</span>
+          </div>
+          <div class="cs-section__body">
+            <p>Led the website build, set up and managed GA4 analytics tracking, and co-presented the full market entry and growth strategy to an academic panel. Responsible for the digital infrastructure that underpinned the pre-launch campaign.</p>
+          </div>
+        </div>
+
+      </div>
+    </article>
+
+    <!-- RESULTS ──────────────────────────────────────────── -->
+    <section class="cs-results" id="results">
+      <div class="container">
+        <span class="label" data-reveal>Results</span>
+
+        <div class="cs-chart-wrap" data-reveal>
+          <p class="cs-chart__title">Weekly Signups</p>
+          <canvas id="signupsChart" class="cs-chart"></canvas>
+          <p class="cs-chart__caption">Organic only. Slow build, then momentum.</p>
+        </div>
+
+        <div class="cs-stats-grid" data-reveal>
+          <div class="cs-stat">
+            <span class="cs-stat__num">180</span>
+            <span class="cs-stat__label">Email signups in two months</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">52<sup style="font-size:0.55em;vertical-align:super">%</sup></span>
+            <span class="cs-stat__label">First-visit conversion rate</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">11.6<sup style="font-size:0.55em;vertical-align:super">K</sup></span>
+            <span class="cs-stat__label">Instagram views</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">2,307</span>
+            <span class="cs-stat__label">Accounts reached</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">6<sup style="font-size:0.55em;vertical-align:super">%</sup></span>
+            <span class="cs-stat__label">Organic CTR</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">10.5<sup style="font-size:0.55em;vertical-align:super">%</sup></span>
+            <span class="cs-stat__label">LinkedIn engagement rate</span>
+          </div>
+          <div class="cs-stat">
+            <span class="cs-stat__num">89<sup style="font-size:0.55em;vertical-align:super">%</sup></span>
+            <span class="cs-stat__label">Mobile visits &mdash; validating the mobile-first product assumption</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- TAKEAWAY ─────────────────────────────────────────── -->
+    <section class="cs-takeaway">
+      <div class="container">
+        <span class="label" data-reveal>The Takeaway</span>
+        <p class="cs-takeaway__text" data-reveal>180 signups from a landing page and organic social alone isn't a business yet, but it's a clear signal the demand is there. The real proof of concept was in the conversion rate: more than half of first-time visitors signed up. The idea didn't need selling. It needed finding.</p>
+      </div>
+    </section>
+
+    <!-- TOOLS ────────────────────────────────────────────── -->
+    <div class="cs-tools">
+      <div class="container">
+        <div class="cs-tools__inner">
+          <span class="label">Tools</span>
+          <ul class="cs-tools__list" aria-label="Tools used">
+            <li>Google Analytics 4</li>
+            <li>Instagram</li>
+            <li>LinkedIn</li>
+            <li>Web Development</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <!-- FOOT NAV ─────────────────────────────────────────── -->
+    <div class="cs-foot-nav">
+      <div class="container">
+        <a href="index.html#work" class="cs-back" data-cursor="link">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true">
+            <path d="M10 3L5 8L10 13" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+          Back to Work
+        </a>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- FOOTER ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">Scott Kirwan</span>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+        <span class="footer__copy">&copy; <span id="year"></span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+  <script>
+    /* Weekly signups line chart */
+    (function () {
+      const canvas = document.getElementById('signupsChart');
+      if (!canvas || !canvas.getContext) return;
+
+      const DATA   = [5, 28, 10, 1, 2, 8, 68, 62];
+      const LABELS = ['15 Feb', '22 Feb', '1 Mar', '8 Mar', '15 Mar', '22 Mar', '29 Mar', '5 Apr'];
+      const ACCENT = '#c6ff00';
+      const BG     = '#111110';
+      const BORDER = 'rgba(237, 233, 223, 0.12)';
+      const MUTED  = '#ede9df';
+      const MAX    = 75;
+
+      function draw() {
+        const W = canvas.offsetWidth;
+        const H = Math.round(W * 0.42);
+        canvas.width  = W * devicePixelRatio;
+        canvas.height = H * devicePixelRatio;
+        canvas.style.height = H + 'px';
+
+        const ctx = canvas.getContext('2d');
+        ctx.scale(devicePixelRatio, devicePixelRatio);
+
+        const pad = { top: 24, right: 24, bottom: 52, left: 44 };
+        const plotW = W - pad.left - pad.right;
+        const plotH = H - pad.top  - pad.bottom;
+
+        /* Background */
+        ctx.fillStyle = BG;
+        ctx.fillRect(0, 0, W, H);
+
+        /* Grid lines + y labels */
+        ctx.font         = `11px Inter, system-ui, sans-serif`;
+        ctx.textBaseline = 'middle';
+        [0, 25, 50, 75].forEach(v => {
+          const y = pad.top + plotH - (v / MAX) * plotH;
+          ctx.strokeStyle = BORDER;
+          ctx.lineWidth   = 1;
+          ctx.beginPath();
+          ctx.moveTo(pad.left, y);
+          ctx.lineTo(pad.left + plotW, y);
+          ctx.stroke();
+          ctx.fillStyle = MUTED;
+          ctx.textAlign = 'right';
+          ctx.fillText(v, pad.left - 8, y);
+        });
+
+        /* Data points */
+        const pts = DATA.map((v, i) => ({
+          x: pad.left + i * (plotW / (DATA.length - 1)),
+          y: pad.top  + plotH - (v / MAX) * plotH,
+        }));
+
+        /* Gradient fill */
+        const grad = ctx.createLinearGradient(0, pad.top, 0, pad.top + plotH);
+        grad.addColorStop(0, 'rgba(198,255,0,0.18)');
+        grad.addColorStop(1, 'rgba(198,255,0,0)');
+        ctx.beginPath();
+        ctx.moveTo(pts[0].x, pad.top + plotH);
+        pts.forEach(p => ctx.lineTo(p.x, p.y));
+        ctx.lineTo(pts[pts.length - 1].x, pad.top + plotH);
+        ctx.closePath();
+        ctx.fillStyle = grad;
+        ctx.fill();
+
+        /* Line */
+        ctx.beginPath();
+        pts.forEach((p, i) => (i === 0 ? ctx.moveTo(p.x, p.y) : ctx.lineTo(p.x, p.y)));
+        ctx.strokeStyle = ACCENT;
+        ctx.lineWidth   = 2;
+        ctx.lineJoin    = 'round';
+        ctx.lineCap     = 'round';
+        ctx.stroke();
+
+        /* Dots */
+        pts.forEach(p => {
+          ctx.beginPath();
+          ctx.arc(p.x, p.y, 3.5, 0, Math.PI * 2);
+          ctx.fillStyle   = ACCENT;
+          ctx.fill();
+          ctx.strokeStyle = BG;
+          ctx.lineWidth   = 1.5;
+          ctx.stroke();
+        });
+
+        /* X-axis labels */
+        ctx.fillStyle    = MUTED;
+        ctx.textAlign    = 'center';
+        ctx.textBaseline = 'top';
+        ctx.font         = `11px Inter, system-ui, sans-serif`;
+        LABELS.forEach((l, i) => ctx.fillText(l, pts[i].x, H - pad.bottom + 14));
+      }
+
+      draw();
+      let raf;
+      window.addEventListener('resize', () => {
+        cancelAnimationFrame(raf);
+        raf = requestAnimationFrame(draw);
+      });
+    })();
+  </script>
+</body>
+</html>

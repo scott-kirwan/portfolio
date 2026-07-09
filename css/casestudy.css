@@ -1,0 +1,908 @@
+/* ============================================================
+   CASE STUDY — extends styles.css
+   ============================================================ */
+
+/* ── Hero ───────────────────────────────────────────────── */
+.cs-hero {
+  padding-top:    calc(var(--nav-h) + 5rem);
+  padding-bottom: 4rem;
+}
+
+.cs-back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.7rem;
+  font-weight: 500;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 3.5rem;
+  transition: color 0.25s var(--ease);
+}
+.cs-back svg { transition: transform 0.25s var(--ease); }
+.cs-back:hover { color: var(--text); }
+.cs-back:hover svg { transform: translateX(-4px); }
+
+.cs-hero__kicker {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-bottom: 1.25rem;
+  flex-wrap: wrap;
+}
+
+.cs-hero__date {
+  font-size: 0.75rem;
+  color: var(--muted);
+  letter-spacing: 0.06em;
+}
+
+.cs-hero__title {
+  font-family: var(--font-hero);
+  font-weight: 700;
+  font-size: clamp(5rem, 13vw, 13rem);
+  letter-spacing: 0.06em;
+  line-height: 0.9;
+  color: var(--text);
+}
+
+/* ── Callout stats ──────────────────────────────────────── */
+.cs-callout {
+  margin-top: clamp(3rem, 6vw, 5rem);
+  padding-top: clamp(2.5rem, 4vw, 3.5rem);
+  border-top: 1px solid var(--border);
+}
+
+.cs-callout__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cs-callout__item {
+  padding-inline: clamp(1.5rem, 3vw, 3rem);
+  border-left: 1px solid var(--border);
+  min-width: 0;
+}
+
+.cs-callout__item:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+.cs-callout__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(3.5rem, 8vw, 8rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 0.875rem;
+}
+
+.cs-callout__num sup {
+  font-size: 0.45em;
+  vertical-align: super;
+  letter-spacing: 0;
+}
+
+.cs-callout__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+}
+
+.cs-callout--compact .cs-callout__num {
+  font-size: clamp(2rem, 4.5vw, 4rem);
+}
+
+.cs-callout__subtext {
+  display: block;
+  font-size: 0.72rem;
+  color: var(--muted);
+  letter-spacing: 0;
+  text-transform: none;
+  line-height: 1.5;
+  margin-top: 0.375rem;
+  max-width: 26ch;
+}
+
+.cs-hero__title--long {
+  font-size: clamp(1.25rem, 6.5vw, 7rem);
+  white-space: nowrap;
+}
+
+/* ── Insight pull quote ─────────────────────────────────── */
+.cs-insight-pull {
+  text-align: center;
+  margin-top: 2rem;
+  padding-block: 2rem;
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-insight-pull p {
+  font-size: clamp(1.125rem, 2vw, 1.5rem);
+  font-weight: 700;
+  color: var(--text);
+  line-height: 1.5;
+  max-width: none;
+}
+
+.cs-insight-pull p + p {
+  margin-top: 0.25rem;
+}
+
+/* ── Email collage ──────────────────────────────────────── */
+.cs-email-collage {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.875rem;
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
+.cs-email-collage__item {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 6px 24px rgba(0, 0, 0, 0.35);
+}
+
+.cs-email-collage__item img {
+  width: 100%;
+  display: block;
+  height: 480px;
+  object-fit: cover;
+  object-position: top;
+}
+
+/* ── Live site button ───────────────────────────────────── */
+.cs-livesite {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--text);
+  border: 1px solid var(--border);
+  padding: 0.55rem 1.2rem;
+  border-radius: 100px;
+  margin-top: 1.75rem;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.cs-livesite:hover {
+  border-color: var(--muted);
+  color: var(--accent);
+}
+
+/* ── Cover image ─────────────────────────────────────────── */
+.cs-cover {
+  padding-bottom: clamp(60px, 8vw, 100px);
+}
+
+.cs-cover__img {
+  width: 100%;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.cs-cover__img img {
+  width: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* ── Inline body link ───────────────────────────────────── */
+.cs-body-link {
+  color: var(--text);
+  border-bottom: 1px solid var(--border);
+  padding-bottom: 1px;
+  transition: border-color 0.2s var(--ease), color 0.2s var(--ease);
+}
+.cs-body-link:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* ── What We Built — two-column layout ──────────────────── */
+.cs-built-cols {
+  display: grid;
+  grid-template-columns: 2fr 3fr;
+  gap: 2rem;
+  margin-top: 2.5rem;
+  /* default align-items: stretch — image defines row height, matrix column fills to match */
+}
+
+.cs-built-col-img img {
+  width: 100%;
+  display: block;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+/* ── Competitive landscape matrix ───────────────────────── */
+.cs-built-col-matrix {
+  display: flex;
+  flex-direction: column;
+  gap: 0.625rem;
+}
+
+.cs-matrix {
+  position: relative;
+  flex: 1;          /* fill remaining column height after caption */
+  min-height: 0;    /* allows flex item to shrink below content size */
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-matrix__vline {
+  position: absolute;
+  left: 50%;
+  top: 10%;
+  bottom: 10%;
+  width: 1px;
+  background: rgba(237, 233, 223, 0.22);
+}
+
+.cs-matrix__hline {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 1px;
+  background: rgba(237, 233, 223, 0.22);
+}
+
+.cs-matrix__axis {
+  position: absolute;
+  font-size: 0.57rem;
+  letter-spacing: 0.09em;
+  text-transform: uppercase;
+  color: var(--text);
+  line-height: 1;
+  pointer-events: none;
+}
+
+.cs-matrix__axis--top    { top: 3.5%; left: 50%; transform: translateX(-50%); }
+.cs-matrix__axis--bottom { bottom: 3.5%; left: 50%; transform: translateX(-50%); }
+.cs-matrix__axis--left   { top: 53%; left: 5%; }
+.cs-matrix__axis--right  { top: 53%; right: 5%; }
+
+.cs-matrix__dot {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+}
+
+.cs-matrix__dot--flip { flex-direction: column-reverse; }
+
+.cs-matrix__mark {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--muted);
+  flex-shrink: 0;
+}
+
+.cs-matrix__dot--rulya .cs-matrix__mark {
+  background: var(--accent);
+  width: 9px;
+  height: 9px;
+}
+
+.cs-matrix__dot-label {
+  font-size: 0.6rem;
+  color: var(--text);
+  white-space: nowrap;
+  line-height: 1;
+  font-family: var(--font-body);
+}
+
+.cs-matrix__dot--rulya .cs-matrix__dot-label {
+  color: var(--accent);
+  font-weight: 600;
+}
+
+.cs-matrix__caption {
+  font-size: 0.72rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--muted);
+  text-align: center;
+}
+
+/* ── Results chart ──────────────────────────────────────── */
+.cs-chart-wrap {
+  margin-bottom: clamp(3rem, 5vw, 4rem);
+}
+
+.cs-chart__title {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+}
+
+.cs-chart {
+  display: block;
+  width: 100%;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.cs-chart__caption {
+  font-size: 0.8rem;
+  color: var(--muted);
+  margin-top: 0.75rem;
+  font-style: italic;
+}
+
+/* ── Article body ───────────────────────────────────────── */
+.cs-article {
+  padding-top: clamp(60px, 8vw, 100px);
+  padding-bottom: clamp(20px, 3vw, 40px);
+  border-top: 1px solid var(--border);
+}
+
+.cs-section {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 2rem 4rem;
+  padding-block: clamp(4rem, 8vw, 6.5rem);
+  border-top: 1px solid var(--border);
+}
+
+.cs-section:first-child { border-top: none; padding-top: 0; }
+
+.cs-section__label {
+  padding-top: 0.3rem;
+}
+
+.cs-section__label::before {
+  content: '';
+  display: block;
+  width: 2rem;
+  height: 2px;
+  background: var(--accent);
+  margin-bottom: 1.125rem;
+}
+
+.cs-section__body p {
+  font-size: 1.125rem;
+  color: var(--text);
+  line-height: 1.85;
+  max-width: 68ch;
+}
+
+.cs-section__body p + p {
+  margin-top: 1.25em;
+}
+
+/* ── Results ────────────────────────────────────────────── */
+.cs-results {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  padding-block: clamp(80px, 10vw, 130px);
+}
+
+.cs-results > .container > .label {
+  display: block;
+  margin-bottom: 3rem;
+}
+
+.cs-stats-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2.5rem 4rem;
+}
+
+.cs-stat {
+  width: 200px;
+  flex-shrink: 0;
+}
+
+.cs-stat__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 4vw, 3.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 0.625rem;
+}
+
+.cs-stat__label {
+  font-size: 0.8rem;
+  color: var(--muted);
+  line-height: 1.55;
+}
+
+/* ── Audience segment cards ─────────────────────────────── */
+.cs-segments {
+  margin-top: 3rem;
+}
+
+.cs-segments__title {
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1.25rem;
+}
+
+.cs-segments-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 1rem;
+}
+
+.cs-segment-card {
+  grid-column: span 2;
+  background: var(--bg);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 1rem 1.125rem;
+}
+
+.cs-segment-card:nth-child(4) { grid-column: 2 / span 2; }
+.cs-segment-card:nth-child(5) { grid-column: 4 / span 2; }
+
+.cs-segment-card__name {
+  display: block;
+  font-size: 0.875rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.375rem;
+  line-height: 1.3;
+}
+
+.cs-segment-card__detail {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.6;
+}
+
+.cs-segment-card__detail span {
+  display: block;
+}
+
+/* ── Supporting results detail ──────────────────────────── */
+.cs-results-detail {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  margin-top: 3.5rem;
+  padding-top: 3rem;
+  border-top: 1px solid var(--border);
+  max-width: 72ch;
+}
+
+.cs-results-detail li {
+  font-size: 1.125rem;
+  color: var(--text);
+  line-height: 1.85;
+  padding-left: 1.25rem;
+  position: relative;
+}
+
+.cs-results-detail li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.65em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+/* ── Qualitative result list ────────────────────────────── */
+.cs-result-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 0.5rem;
+}
+
+.cs-result-item {
+  padding-left: 1.5rem;
+  border-left: 2px solid var(--accent);
+}
+
+.cs-result-item p {
+  font-size: 1.0625rem;
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 65ch;
+}
+
+/* ── Takeaway ───────────────────────────────────────────── */
+.cs-takeaway {
+  padding-block: clamp(80px, 10vw, 130px);
+  border-top: 1px solid var(--border);
+}
+
+.cs-takeaway .label { margin-bottom: 1.5rem; }
+
+.cs-takeaway__text {
+  font-size: clamp(1.125rem, 2vw, 1.375rem);
+  color: var(--text);
+  line-height: 1.8;
+  max-width: 72ch;
+}
+
+/* ── Tools ──────────────────────────────────────────────── */
+.cs-tools {
+  background: var(--surface);
+  border-top: 1px solid var(--border);
+  border-bottom: 1px solid var(--border);
+  padding-block: 1.75rem;
+}
+
+.cs-tools__inner {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+}
+
+.cs-tools__list {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.cs-tools__list li {
+  font-size: 0.8125rem;
+  color: var(--muted);
+  padding-inline: 1.25rem;
+  border-left: 1px solid var(--border);
+}
+.cs-tools__list li:first-child {
+  padding-left: 0;
+  border-left: none;
+}
+
+/* ── Bottom nav (back button) ───────────────────────────── */
+.cs-foot-nav {
+  padding-block: clamp(60px, 8vw, 100px);
+}
+
+/* ── SONAS email mockup + flow diagrams ─────────────────── */
+.cs-email-mockup {
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid var(--border);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+.cs-email-mockup__chrome {
+  background: #202020;
+  border-bottom: 1px solid var(--border);
+  padding: 0.5rem 0.75rem;
+  display: flex;
+  gap: 0.375rem;
+  align-items: center;
+}
+
+.cs-email-mockup__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+}
+.cs-email-mockup__dot:nth-child(1) { background: #ff5f57; }
+.cs-email-mockup__dot:nth-child(2) { background: #febc2e; }
+.cs-email-mockup__dot:nth-child(3) { background: #28c840; }
+
+.cs-email-mockup img {
+  width: 100%;
+  display: block;
+}
+
+.cs-email-caption {
+  font-size: 0.7rem;
+  color: var(--muted);
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  text-align: left;
+  margin-bottom: 0.875rem;
+  line-height: 1.5;
+}
+
+.cs-flows {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.cs-flow {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 1.125rem 1.25rem 1.375rem;
+}
+
+.cs-flow__title {
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--muted);
+  margin-bottom: 1rem;
+  padding-bottom: 0.75rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.cs-flow__cadence {
+  font-size: 0.7rem;
+  color: var(--muted);
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+.cs-flow__steps {
+  display: flex;
+  flex-direction: column;
+}
+
+.cs-flow__box {
+  background: var(--bg);
+  border: 1px solid rgba(237, 233, 223, 0.35);
+  border-radius: 5px;
+  padding: 0.55rem 0.875rem;
+}
+
+.cs-flow__box-name {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--text);
+  line-height: 1.3;
+}
+
+.cs-flow__box-detail {
+  display: block;
+  font-size: 0.68rem;
+  color: var(--muted);
+  margin-top: 0.2rem;
+  line-height: 1.45;
+}
+
+.cs-flow__connector {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0.25rem 0;
+  gap: 0.1rem;
+}
+
+.cs-flow__interval {
+  font-size: 0.58rem;
+  color: var(--muted);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1;
+}
+
+.cs-flow__arrow {
+  font-size: 0.875rem;
+  color: var(--accent);
+  line-height: 1;
+  display: block;
+}
+
+/* ── Stat cards (The Numbers section) ──────────────────── */
+.cs-stat-cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-top: 2.5rem;
+}
+
+.cs-stat-card {
+  flex: 1;
+  min-width: 120px;
+}
+
+.cs-stat-card__num {
+  display: block;
+  font-family: var(--font-display);
+  font-size: clamp(1.75rem, 3vw, 2.75rem);
+  font-weight: 800;
+  letter-spacing: -0.04em;
+  line-height: 1;
+  color: var(--text);
+  margin-bottom: 0.5rem;
+}
+
+.cs-stat-card__num sup {
+  font-size: 0.5em;
+  vertical-align: super;
+  letter-spacing: 0;
+}
+
+.cs-stat-card__label {
+  font-size: 0.75rem;
+  color: var(--muted);
+  line-height: 1.45;
+}
+
+/* ── Standalone matrix (full-width, fixed height) ──────── */
+.cs-matrix-standalone {
+  position: relative;
+  height: 340px;
+  margin-top: 2rem;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cs-matrix--lime .cs-matrix__vline,
+.cs-matrix--lime .cs-matrix__hline {
+  background: rgba(198, 255, 0, 0.5);
+}
+
+/* ── The Tension diagram ────────────────────────────────── */
+.cs-tension {
+  display: flex;
+  align-items: flex-start;
+  margin-top: 2.5rem;
+}
+
+.cs-tension__col {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.cs-tension__arrow {
+  flex-shrink: 0;
+  width: 2.5rem;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  padding-top: 1rem;
+  font-size: 1rem;
+  color: var(--accent);
+}
+
+.cs-tension__box {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.875rem 1rem;
+}
+
+.cs-tension__box-name {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--text);
+  margin-bottom: 0.375rem;
+  line-height: 1.3;
+}
+
+.cs-tension__box-detail {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.cs-tension__down {
+  text-align: center;
+  font-size: 1rem;
+  color: var(--accent);
+  line-height: 1.5;
+}
+
+.cs-tension__trap {
+  background: rgba(198, 255, 0, 0.06);
+  border: 1px solid var(--accent);
+  border-radius: 6px;
+  padding: 0.875rem 1rem;
+}
+
+.cs-tension__trap-name {
+  display: block;
+  font-size: 0.8125rem;
+  font-weight: 700;
+  color: var(--accent);
+  margin-bottom: 0.375rem;
+  line-height: 1.3;
+}
+
+.cs-tension__trap-detail {
+  display: block;
+  font-size: 0.7rem;
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+/* ── Responsive ─────────────────────────────────────────── */
+@media (max-width: 900px) {
+  .cs-section {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+
+
+  .cs-built-cols {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .cs-hero__title {
+    font-size: clamp(4rem, 18vw, 8rem);
+    letter-spacing: 0.03em;
+  }
+
+  .cs-hero__title--long {
+    font-size: 6.5vw;
+  }
+
+  .cs-tension {
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .cs-tension__arrow {
+    display: none;
+  }
+
+  .cs-email-collage {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-segments-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cs-segment-card,
+  .cs-segment-card:nth-child(4),
+  .cs-segment-card:nth-child(5) {
+    grid-column: 1;
+  }
+
+  .cs-callout__grid {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+
+  .cs-callout__item {
+    padding-inline: 0;
+    border-left: none;
+    border-top: 1px solid var(--border);
+    padding-block: 2rem;
+  }
+
+  .cs-callout__item:first-child {
+    border-top: none;
+    padding-top: 0;
+  }
+
+  .cs-tools__inner {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+}

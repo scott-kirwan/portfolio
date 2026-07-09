@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Scott Kirwan — Marketing professional. Brand strategy, campaigns, and creative direction." />
+  <title>Scott Kirwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@700&family=Syne:wght@400;700;800&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/styles.css" />
+</head>
+<body>
+
+  <!-- Grain texture -->
+  <svg class="grain" aria-hidden="true" focusable="false" xmlns="http://www.w3.org/2000/svg">
+    <filter id="noise">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="3" stitchTiles="stitch" />
+    </filter>
+    <rect width="100%" height="100%" filter="url(#noise)" />
+  </svg>
+
+  <!-- Custom cursor -->
+  <div class="cursor-dot"  id="cursorDot"  aria-hidden="true"></div>
+  <div class="cursor-ring" id="cursorRing" aria-hidden="true"></div>
+
+  <!-- Work hover preview (follows cursor) -->
+  <div class="work-preview" id="workPreview" aria-hidden="true">
+    <div class="work-preview__img" id="workPreviewImg"></div>
+  </div>
+
+  <!-- NAV ──────────────────────────────────────────────── -->
+  <header class="nav" id="nav">
+    <div class="nav__inner">
+      <a href="#hero" class="nav__tagline" data-cursor="link">The analytical creative.</a>
+
+      <nav class="nav__links" id="navLinks" aria-label="Main navigation">
+        <a href="#work"    data-cursor="link">Work</a>
+        <a href="#about"   data-cursor="link">About</a>
+        <a href="#contact" data-cursor="link">Contact</a>
+      </nav>
+
+      <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" class="nav__linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+          <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+        </svg>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- HERO ─────────────────────────────────────────────── -->
+    <section class="hero" id="hero">
+      <div class="hero__inner">
+
+        <div class="hero__content">
+          <div class="hero__meta">
+            <span>Dublin, Ireland</span>
+          </div>
+
+          <div class="hero__name" aria-label="Scott Kirwan">
+            <div class="hero__row">
+              <span class="hero__first">SCOTT</span>
+            </div>
+            <div class="hero__row hero__row--right">
+              <span class="hero__last">KIRWAN</span>
+            </div>
+          </div>
+
+          <p class="hero__tagline">The analytical creative.</p>
+
+          <div class="hero__foot">
+            <div class="hero__ctas">
+              <a href="#work" class="hero__cta" data-cursor="link">
+                <span>Explore Work</span>
+                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                  <path d="M3.5 9H14.5M14.5 9L10 4.5M14.5 9L10 13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </a>
+              <a href="#contact" class="hero__cta hero__cta--secondary" data-cursor="link">
+                <span>Work with me</span>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__photo-col" aria-hidden="true">
+          <div class="hero__photo"></div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- MARQUEE ──────────────────────────────────────────── -->
+    <div class="marquee" aria-hidden="true">
+      <div class="marquee__track">
+        <span>Brand Strategy</span><span class="marquee__sep">✦</span>
+        <span>Campaign Planning</span><span class="marquee__sep">✦</span>
+        <span>Creative Direction</span><span class="marquee__sep">✦</span>
+        <span>Go-To-Market</span><span class="marquee__sep">✦</span>
+        <span>Content Strategy</span><span class="marquee__sep">✦</span>
+        <span>Brand Strategy</span><span class="marquee__sep">✦</span>
+        <span>Campaign Planning</span><span class="marquee__sep">✦</span>
+        <span>Creative Direction</span><span class="marquee__sep">✦</span>
+        <span>Go-To-Market</span><span class="marquee__sep">✦</span>
+        <span>Content Strategy</span><span class="marquee__sep">✦</span>
+      </div>
+    </div>
+
+    <!-- WORK ─────────────────────────────────────────────── -->
+    <section class="section work" id="work">
+      <div class="container">
+        <header class="work__header" data-reveal>
+          <span class="label">Selected Work</span>
+          <h2 class="work__title">Projects</h2>
+        </header>
+
+        <ul class="work__list">
+          <li class="work__item" data-preview-color="#0c1f30" data-preview-image="rulya-logo.png" data-preview-fit="contain" data-reveal>
+            <a href="rulya.html" class="work__item-link" data-cursor="link">
+              <span class="work__num">01</span>
+              <span class="work__tag">Product &amp; Growth</span>
+              <h3 class="work__name">Rulya</h3>
+              <span class="work__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M4 11H18M18 11L12 5M18 11L12 17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="work__item" data-preview-color="#0d1a2b" data-preview-image="sonas-logo.png" data-preview-fit="contain" data-reveal>
+            <a href="sonas.html" class="work__item-link" data-cursor="link">
+              <span class="work__num">02</span>
+              <span class="work__tag">Email Marketing &amp; Automation</span>
+              <h3 class="work__name">SONAS Bathrooms</h3>
+              <span class="work__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M4 11H18M18 11L12 5M18 11L12 17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+          <li class="work__item" data-preview-color="#1a0a0f" data-preview-image="tinder-preview.png" data-reveal>
+            <a href="tinder.html" class="work__item-link" data-cursor="link">
+              <span class="work__num">03</span>
+              <span class="work__tag">Campaign Strategy</span>
+              <h3 class="work__name">Tinder &times; Boiler Room</h3>
+              <span class="work__arrow" aria-hidden="true">
+                <svg width="22" height="22" viewBox="0 0 22 22" fill="none">
+                  <path d="M4 11H18M18 11L12 5M18 11L12 17" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ABOUT ────────────────────────────────────────────── -->
+    <section class="section about" id="about">
+      <div class="container">
+        <span class="label" data-reveal>About</span>
+
+        <div class="about__inner">
+          <div class="about__image-col" data-reveal>
+            <div class="about__image"></div>
+          </div>
+
+          <div class="about__content">
+            <h2 class="about__headline" data-reveal>
+              Strategy.<br />Instinct.<br /><em>Culture.</em>
+            </h2>
+            <p class="about__bio" data-reveal>
+              I'm a marketer who sits between data and creativity and I've learned
+              that's a rare place to be. I came into marketing through a genuine
+              obsession with culture and community through photography and music.
+              What it led to was the craft behind brands that actually mean something.
+            </p>
+            <p class="about__bio" data-reveal>
+              That instinct got sharper when I paired it with analytics, SEO, and
+              growth strategy built across four years of real campaigns. The result
+              is a point of view that's hard to replicate: I can read a dataset and
+              feel where the creative opportunity lives. I don't make the obvious
+              decision. I make the right one.
+            </p>
+
+            <div class="about__stats" data-reveal>
+              <div class="stat">
+                <span class="stat__num">4<sup>+</sup></span>
+                <span class="stat__label">Years in market</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">36<sup>%</sup></span>
+                <span class="stat__label">Organic traffic growth</span>
+              </div>
+              <div class="stat">
+                <span class="stat__num">20<sup>%</sup></span>
+                <span class="stat__label">Email open rate uplift</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT ──────────────────────────────────────────── -->
+    <section class="section contact" id="contact">
+      <div class="container">
+        <div class="contact__inner">
+
+          <div class="contact__left" data-reveal>
+            <span class="label">Contact</span>
+            <h2 class="contact__headline">
+              Work<br />with me.
+            </h2>
+            <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" class="contact__linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+                <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+              </svg>
+              LinkedIn
+            </a>
+          </div>
+
+          <form class="contact__form" id="contactForm" action="https://formspree.io/f/mzdqkjrl" method="POST" data-reveal>
+            <div class="form__group">
+              <label for="name">Name</label>
+              <input type="text" id="name" name="name" placeholder="Your name" autocomplete="name" />
+            </div>
+            <div class="form__group">
+              <label for="email">Email</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" autocomplete="email" />
+            </div>
+            <div class="form__group">
+              <label for="message">Message</label>
+              <textarea id="message" name="message" rows="4" placeholder="What are you working on?" maxlength="1000"></textarea>
+            </div>
+            <button type="submit" class="btn-submit" data-cursor="link">
+              <span>Send Message</span>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" aria-hidden="true">
+                <path d="M3.5 9H14.5M14.5 9L10 4.5M14.5 9L10 13.5" stroke="currentColor" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </form>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- FOOTER ───────────────────────────────────────────── -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__inner">
+        <span class="footer__name">Scott Kirwan</span>
+        <div class="footer__links">
+          <a href="https://www.linkedin.com/in/scott-kirwan-a81163185" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn" data-cursor="link">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+        </div>
+        <span class="footer__copy">&copy; <span id="year"></span></span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
